@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tranfer text</title>
+</head>
+<body>
+<script>
+    let text = prompt("Please input text");
+    let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let lower = "abcdefghijklmnopqrstuvwxyz";
+    let result = [];
+    for (let i = 0; i < text.length; i++) {
+        if (upper.indexOf(text[i]) !== -1) {
+            result.push(text[i].toLowerCase());
+        } else if (lower.indexOf(text[i]) !== -1) {
+            result.push(text[i].toUpperCase());
+        } else {
+            result.push(text[i]);
+        }
+    }
+    document.write(result.join(""));
+</script>
+</body>
+</html>
